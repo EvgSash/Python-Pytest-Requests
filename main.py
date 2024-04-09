@@ -24,15 +24,15 @@ body_catch_pokemon = {
     "pokemon_id": ID
 }
 
-add_pokemon = requests.post(url = f'{URL}pokemons', headers = HEADERS, json = body_add_pokemon)                         # создать покемона
+add_pokemon = requests.post(url = f'{URL}pokemons', headers = HEADERS, json = body_add_pokemon)                         
 
 print(add_pokemon.text)
 
-rename_pokemon = requests.put(url = f'{URL}pokemons', headers = HEADERS, json = body_rename_pokemon)                    # изменить покемона
+rename_pokemon = requests.put(url = f'{URL}pokemons', headers = HEADERS, json = body_rename_pokemon)                    
 
 print(rename_pokemon.text)
 
-catch_pokemon = requests.post(url = f'{URL}trainers/add_pokeball', headers = HEADERS, json = body_catch_pokemon)        # поймать покемона
+catch_pokemon = requests.post(url = f'{URL}trainers/add_pokeball', headers = HEADERS, json = body_catch_pokemon)        
 
 print(catch_pokemon.text)
 
